@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-console.log('Counter.jsx ready');
+// console.log('Counter.jsx ready');
 
 export default function Counter() {
 
-    console.log('Counter Function rendered');
+    // console.log('Counter Function rendered');
 
     const [number, setNumber] = useState(0);
 

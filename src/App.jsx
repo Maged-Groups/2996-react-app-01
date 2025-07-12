@@ -6,7 +6,7 @@ export default function App() {
 
 
   return (
-    <div className="h-screen flex items-center justify-center gap-4">
+    <div className="min-h-screen flex justify-center gap-4">
       {/* <Counter /> */}
 
       <Register />
