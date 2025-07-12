@@ -16,6 +16,7 @@ export default function Counter() {
         setNumber(cur => cur + 1);
         setNumber(cur => cur + 1);
     }
+    
 
 
     return (
