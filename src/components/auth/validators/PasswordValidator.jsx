@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import Circle from "./validators/ValidatorCircle";
+import Circle from "./ValidatorCircle";
 
 function PasswordValidator({ password, passwordConfirmation }) {
 
