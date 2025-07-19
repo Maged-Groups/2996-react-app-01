@@ -11,10 +11,10 @@ export default function TopNavbar() {
                     {/* Center - Navigation Links */}
                     <div className="hidden md:flex items-center space-x-8">
                         <a href="/" className="text-gray-800 hover:text-blue-600 px-3 py-2 font-medium">Home</a>
-                        <a href="" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Users</a>
-                        <a href="#" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
-                        <a href="#" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">About</a>
-                        <a href="#" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Contact us</a>
+                        <a href="/users" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Users</a>
+                        <a href="/pricing" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
+                        <a href="/about" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">About</a>
+                        <a href="/contact" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Contact us</a>
                     </div>
 
                     {/* Right side - Buttons */}
