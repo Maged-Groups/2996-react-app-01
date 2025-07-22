@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function TopNavbar() {
     return (
         <nav className="bg-white shadow-sm">
@@ -9,12 +11,19 @@ export default function TopNavbar() {
                     </div>
 
                     {/* Center - Navigation Links */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        <a href="/" className="text-gray-800 hover:text-blue-600 px-3 py-2 font-medium">Home</a>
-                        <a href="/users" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Users</a>
-                        <a href="/pricing" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
-                        <a href="/about" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">About</a>
-                        <a href="/contact" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Contact us</a>
+                    <div className="hidden md:flex items-center space-x-8 overflow-auto">
+                        <Link to="/" className="text-gray-800 hover:text-blue-600 px-3 py-2 font-medium">Home</Link>
+                        <Link to="/users" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Users</Link>
+                        <Link to="/users" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Products</Link>
+                        <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Quotes</Link>
+                        <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Todos</Link>
+                        <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Carts</Link>
+                        <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Posts</Link>
+                        <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Comments</Link>
+                        <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Recipes</Link>
+                        <Link to="/services" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Services</Link>
+                        <Link to="/about" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">About</Link>
+                        <Link to="/contact" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Contacts</Link>
                     </div>
 
                     {/* Right side - Buttons */}

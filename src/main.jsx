@@ -6,6 +6,9 @@ import App from './App.jsx'
 // React Router
 import { BrowserRouter } from 'react-router'
 
+
+console.log('Main.jsx')
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />

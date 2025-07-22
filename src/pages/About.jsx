@@ -1,6 +1,15 @@
+import { Link, Outlet, useHref } from "react-router";
+console.log('About.jsx')
+
 export default function About() {
+
+    let href = useHref().replaceAll('/', '');
+
+
     return (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
+
+            {/* Header */}
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -8,6 +17,7 @@ export default function About() {
                 </p>
             </div>
 
+            {/* Our Story */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Story</h2>
@@ -23,18 +33,33 @@ export default function About() {
                 <div className="bg-gray-200 h-64 rounded-lg"></div>
             </div>
 
-            <div className="mt-16">
-                <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Our Team</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {[1, 2, 3, 4].map((item) => (
-                        <div key={item} className="bg-white p-6 rounded-lg shadow-sm text-center">
-                            <div className="bg-gray-200 h-32 w-32 mx-auto rounded-full mb-4"></div>
-                            <h3 className="text-lg font-medium text-gray-800">Team Member {item}</h3>
-                            <p className="text-gray-500">Position/Role</p>
-                        </div>
-                    ))}
-                </div>
+            {/* Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+                <Link to="/about" className="text-gray-800 hover:text-blue-600 px-3 py-2 font-medium">About</Link>
+                <Link to="mission" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Mission</Link>
+                <Link to="vision" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Vision</Link>
+                <Link to="future" className="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Future</Link>
             </div>
+
+            {/* Outlet */}
+            <Outlet />
+
+            {/* Our Team */}
+            {
+                href === 'about' &&
+                <div className="mt-16">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Our Team</h2>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[1, 2, 3, 4].map((item) => (
+                            <div key={item} className="bg-white p-6 rounded-lg shadow-sm text-center">
+                                <div className="bg-gray-200 h-32 w-32 mx-auto rounded-full mb-4"></div>
+                                <h3 className="text-lg font-medium text-gray-800">Team Member {item}</h3>
+                                <p className="text-gray-500">Position/Role</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            }
         </main>
     );
 };

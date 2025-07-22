@@ -6,6 +6,8 @@ import Pages from './pages';
 
 import { useState } from 'react';
 
+console.log('App.jsx')
+
 export default function App() {
 
   return (
