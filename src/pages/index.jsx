@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import { lazy } from 'react'
 
 // Pages
+import Login from "./Login";
 
 // Users
 
@@ -23,11 +24,20 @@ const Users = lazy(() => import("./Users"))
 import P404 from "./P404";
 
 export default function Pages() {
+     const isLoggedin = true;
     return (
         <Routes>
-            {/* users */}
-            <Route path='users' element={<Users />} />
-            <Route path="/users/:user_id" element={<User />} />
+            {/* Auth */}
+
+            {
+                isLoggedin &&
+                <>
+                    {/* users */}
+                    <Route path='users' element={<Users />} />
+                    <Route path="/users/:user_id" element={<User />} />
+                </>
+            }
+            <Route path="auth/login" element={<Login />} />
 
 
             <Route path='services' element={<Services />} />
@@ -39,8 +49,8 @@ export default function Pages() {
                 <Route path='future' element={<Future />} />
             </Route>
 
-
             <Route path='/' element={<Home />} />
+
 
             {/* Fallback Route = Route Not Found */}
             <Route path='*' element={<P404 />} />

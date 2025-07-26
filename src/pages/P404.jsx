@@ -1,3 +1,5 @@
+import img404 from '../assets/imgs/404.jpg';
+
 export default function P404() {
     return (
         <div className="text-center mt-12">
@@ -5,6 +7,8 @@ export default function P404() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Page not found.
             </p>
+
+            <img src={img404} width={500} height={500} alt='404 page not found' className='mx-auto max-w-100 h-auto' />
         </div>
     )
 
